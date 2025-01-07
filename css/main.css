@@ -4,6 +4,7 @@
 .logo { /**/
   font-size: 24px;
   font-style: oblique;
+  margin: 1rem;
 }
 
 ul {
@@ -15,14 +16,14 @@ li {
 }
 
 img {
-  max-width: 50%;
+  width: 100%;
 }
 
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 6fr 6fr 6fr;
+  grid-template-rows: auto auto auto auto;
   grid-template-areas: "header header header header" "main main main main" "main main main main" "footer footer footer footer";
 }
 body header {
@@ -45,9 +46,89 @@ body header nav ul {
 }
 body main {
   grid-row: 2/4;
-  grid-column: 1/4;
+  grid-column: 1/5;
+}
+body main #info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+body main #info p {
+  margin: 2rem;
+  grid-column: 1/1;
+  font-size: 20px;
+}
+body main #info img {
+  grid-column: 2/2;
+  max-height: 20rem;
+}
+body main h3 {
+  text-align: center;
+  font-size: 28px;
+  margin: 0;
+  margin-top: 1rem;
+}
+body main #kurs {
+  display: flex;
+  justify-content: space-around;
+}
+body main #kurs article {
+  background-color: #7030A0;
+  display: flex;
+  margin: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 15rem;
+  padding: 0.5rem;
+}
+body main #kurs article h4 {
+  color: #fff2cc;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 20px;
+}
+body main #kurs article p {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 0;
 }
 body footer {
   grid-row: 4/4;
-  grid-column: 1/4;
+  grid-column: 1/5;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+body footer form {
+  grid-column: 1/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+body footer form label {
+  display: none;
+}
+body footer form input {
+  background-color: #fff2cc;
+  padding: 1rem;
+  border-color: #232323;
+  border-radius: 10px;
+  width: 85%;
+  margin: 0.5rem;
+}
+body footer form button {
+  background-color: #548235;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+  width: 40%;
+  color: #ffffff;
+  text-align: left;
+}
+body footer img {
+  grid-column: 3/4;
+}
+body footer nav {
+  grid-column: 4/4;
 }/*# sourceMappingURL=main.css.map */
